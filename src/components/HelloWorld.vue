@@ -1,36 +1,34 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
-    
+    <PageHeader :wishlistButton="true" :productsButton="true" />
+    <h1 class="cus-heading">Welcome to wishlist app!</h1>
+    <img
+      :src="require('../assets/wishlist.jpg')"
+      alt="Product Image"
+      class="custom"
+    />
   </div>
 </template>
 
 <script>
+import PageHeader from "../components/PageHeader.vue";
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
+  name: "HelloWorld",
+  components: {
+    PageHeader,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.custom {
+  width: 100%;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-h1 {
-  text-align: center;
+
+.cus-heading {
+  align-items: center;
+  margin-left: 30%;
 }
 </style>
