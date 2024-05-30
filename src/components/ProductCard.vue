@@ -45,6 +45,7 @@ export default {
         await UserService.addToWishList({
           productId: this.product.id.N,
         });
+        alert("Item has been Added to wishlist");
       } catch (error) {
         console.log("Error occered while adding item to wishlist: ", error);
       }

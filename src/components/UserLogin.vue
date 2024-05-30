@@ -68,7 +68,7 @@ export default {
         const token = response.data.token;
 
         localStorage.setItem("authToken", token);
-        this.$router.push({ name: "Product" });
+        this.$router.push({ name: "Home" });
 
         Api().defaults.headers.common["Authorization"] = `Bearer ${token}`;
       }
